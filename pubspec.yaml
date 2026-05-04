@@ -1,7 +1,7 @@
-name: beauty_verse_attendance
+name: asx_attendance
 description: "A new Flutter project."
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -85,3 +85,5 @@ flutter_icons:
   remove_alpha_ios: true
   android: true
   ios: true
+
+  #  fvm dart run flutter_launcher_icons => Buat menjalankan icon flutter

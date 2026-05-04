@@ -1,6 +1,6 @@
 {
-    "name": "beauty_verse_attendance",
-    "short_name": "beauty_verse_attendance",
+    "name": "asx_attendance",
+    "short_name": "asx_attendance",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

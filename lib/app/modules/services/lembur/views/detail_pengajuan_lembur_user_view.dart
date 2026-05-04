@@ -107,7 +107,7 @@ class _DetailPengajuanLemburUserState extends State<DetailPengajuanLemburUser> {
   String _checkStatusApproval(String approval) {
     switch (approval) {
       case "Pending":
-        return 'Menunggu perjetujuan ';
+        return 'Menunggu persetujuan ';
       case "Approved":
         return 'Disetujui oleh ';
       case "Rejected":

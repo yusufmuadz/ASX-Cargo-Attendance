@@ -904,12 +904,14 @@ class ApiController extends GetxController {
 
       if (res.statusCode == 200) {
         List data = json.decode(res.body)["data"];
-      // debugPrint('Response Body: $data');
+        // debugPrint('Response Body Data Cuti: $data');
         List<TimeOff> result = data.map((e) => TimeOff.fromJson(e)).toList();
         m.timeOff(result);
+
+        // debugPrint('Response Result Cuti: $result');
         return result;
       } else {
-      // debugPrint('Response Body: ${res.body}');
+        // debugPrint('Response Body Cuti: ${res.body}');
         log(json.decode(res.body));
       }
     } catch (e) {
@@ -934,7 +936,7 @@ class ApiController extends GetxController {
 
       if (res.statusCode == 200) {
         var data = json.decode(res.body);
-        debugPrint(data);
+        // debugPrint(data);
       } else {
         log(json.decode(res.body));
       }

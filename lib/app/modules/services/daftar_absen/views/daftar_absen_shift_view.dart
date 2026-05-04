@@ -58,30 +58,34 @@ class _DaftarAbsenShiftViewState extends State<DaftarAbsenShiftView> {
             hintText: calendarC.text,
             controller: calendarC,
             onTap: () {
-              showMonthPicker(
-                context,
-                onSelected: (month, year) {
-                  sYear = year;
-                  sMonth = month;
+              try {
+                showMonthPicker(
+                  context,
+                  onSelected: (month, year) {
+                    sYear = year;
+                    sMonth = month;
 
-                  setState(() {
-                    calendarC.text = DateFormat(
-                      'MMMM yyyy',
-                      'id_ID',
-                    ).format(DateTime(year, month));
-                  });
-                },
-                initialSelectedMonth: sMonth,
-                initialSelectedYear: sYear,
-                firstYear: 2000,
-                lastYear: 2025,
-                selectButtonText: 'OK',
-                cancelButtonText: 'Cancel',
-                highlightColor: Colors.amber.shade900,
-                textColor: Colors.black,
-                contentBackgroundColor: Colors.white,
-                dialogBackgroundColor: Colors.grey[200],
-              );
+                    setState(() {
+                      calendarC.text = DateFormat(
+                        'MMMM yyyy',
+                        'id_ID',
+                      ).format(DateTime(year, month));
+                    });
+                  },
+                  initialSelectedMonth: sMonth,
+                  initialSelectedYear: sYear,
+                  firstYear: 2000,
+                  lastYear: DateTime.now().year + 1,
+                  selectButtonText: 'OK',
+                  cancelButtonText: 'Cancel',
+                  highlightColor: Colors.amber.shade900,
+                  textColor: Colors.black,
+                  contentBackgroundColor: Colors.white,
+                  dialogBackgroundColor: Colors.grey[200],
+                );
+              } catch (e) {
+                debugPrint('Error open month picker $e');
+              }
             },
           ),
         ),

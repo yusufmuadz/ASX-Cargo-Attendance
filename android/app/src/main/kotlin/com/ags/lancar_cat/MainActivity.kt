@@ -1,4 +1,4 @@
-package com.ags.beauty_verse_attendance
+package com.ags.asx_attendance
 
 import io.flutter.embedding.android.FlutterActivity
 

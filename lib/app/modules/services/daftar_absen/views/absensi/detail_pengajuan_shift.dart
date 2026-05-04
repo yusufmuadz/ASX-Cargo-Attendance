@@ -97,7 +97,7 @@ class _DetailPengajuanShiftViewState extends State<DetailPengajuanShiftView> {
   _checkStatusApproval(String approval) {
     switch (approval) {
       case "Pending":
-        return 'Menunggu perjetujuan ';
+        return 'Menunggu persetujuan ';
       case "Approved":
         return 'Disetujui oleh ';
       case "Rejected":

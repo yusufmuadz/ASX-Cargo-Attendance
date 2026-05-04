@@ -13,9 +13,9 @@ import 'package:image/image.dart' as img;
 import 'package:path_provider/path_provider.dart';
 
 class Variables {
-  static const String appName = "Beauty Verse Presensi";
+  static const String appName = "ASX Cargo Presensi";
   // static const String baseUrl = "https://192.168.5.3:8000/api";
-  static const String baseUrl = "https://apibeautyverse.aisystem.id/api";
+  static const String baseUrl = "https://apiasxcargo.aisystem.id/api";
   static const String logoPath = "assets/logo/logo_.png";
   static const String logoPathSecond = "assets/logo/logo.png";
   static const String avatarDefault = "assets/logo/logo_.png";

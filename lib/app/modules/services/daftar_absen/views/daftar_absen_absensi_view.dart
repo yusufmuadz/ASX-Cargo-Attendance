@@ -71,7 +71,7 @@ class _DaftarAbsenAbsensiViewState extends State<DaftarAbsenAbsensiView> {
                 initialSelectedMonth: sMonth,
                 initialSelectedYear: sYear,
                 firstYear: 2000,
-                lastYear: 2025,
+                lastYear: DateTime.now().year + 1,
                 selectButtonText: 'OK',
                 cancelButtonText: 'Cancel',
                 highlightColor: Colors.amber,

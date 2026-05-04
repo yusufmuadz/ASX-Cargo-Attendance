@@ -92,7 +92,7 @@ class _DetailPengajuanAbsensiState extends State<DetailPengajuanAbsensi> {
   _checkStatusApproval(String approval) {
     switch (approval) {
       case "Pending":
-        return 'Menunggu perjetujuan ';
+        return 'Menunggu persetujuan ';
       case "Approved":
         return 'Disetujui oleh ';
       case "Rejected":
