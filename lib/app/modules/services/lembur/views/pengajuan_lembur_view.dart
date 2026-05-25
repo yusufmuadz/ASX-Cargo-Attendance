@@ -457,6 +457,14 @@ class _PengajuanLemburViewState extends State<PengajuanLemburView> {
               context: context,
               initialTime: TimeOfDay.now(),
               initialEntryMode: TimePickerEntryMode.input,
+              builder: (context, child) => MediaQuery(
+                data: MediaQuery.of(context).copyWith(
+                  // alwaysUse24HourFormat: true,
+                  viewInsets: EdgeInsets.zero,
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: child ?? const SizedBox.shrink(),
+              ),
             );
 
             if (result != null) {
@@ -492,6 +500,14 @@ class _PengajuanLemburViewState extends State<PengajuanLemburView> {
               context: context,
               initialTime: TimeOfDay.now(),
               initialEntryMode: TimePickerEntryMode.input,
+              builder: (context, child) => MediaQuery(
+                data: MediaQuery.of(context).copyWith(
+                  // alwaysUse24HourFormat: true,
+                  viewInsets: EdgeInsets.zero,
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: child ?? const SizedBox.shrink(),
+              ),
             );
 
             if (result != null) {
@@ -538,6 +554,14 @@ class _PengajuanLemburViewState extends State<PengajuanLemburView> {
               context: context,
               initialTime: TimeOfDay(hour: 0, minute: 0),
               initialEntryMode: TimePickerEntryMode.input,
+              builder: (context, child) => MediaQuery(
+                data: MediaQuery.of(context).copyWith(
+                  // alwaysUse24HourFormat: true,
+                  viewInsets: EdgeInsets.zero,
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: child ?? const SizedBox.shrink(),
+              ),
             ).then((value) {
               if (value != null) {
                 controller.durasiIstirahatController.text = timeFormatInput(
@@ -581,6 +605,14 @@ class _PengajuanLemburViewState extends State<PengajuanLemburView> {
               context: context,
               initialTime: TimeOfDay(hour: 0, minute: 0),
               initialEntryMode: TimePickerEntryMode.input,
+              builder: (context, child) => MediaQuery(
+                data: MediaQuery.of(context).copyWith(
+                  // alwaysUse24HourFormat: true,
+                  viewInsets: EdgeInsets.zero,
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: child ?? const SizedBox.shrink(),
+              ),
             ).then((value) {
               if (value != null) {
                 controller.durasiLemburSebelumShift.text = timeFormatInput(
@@ -605,6 +637,14 @@ class _PengajuanLemburViewState extends State<PengajuanLemburView> {
               context: context,
               initialTime: TimeOfDay(hour: 0, minute: 0),
               initialEntryMode: TimePickerEntryMode.input,
+              builder: (context, child) => MediaQuery(
+                data: MediaQuery.of(context).copyWith(
+                  // alwaysUse24HourFormat: true,
+                  viewInsets: EdgeInsets.zero,
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: child ?? const SizedBox.shrink(),
+              ),
             ).then((value) {
               if (value != null) {
                 controller.durasiIstirahatSebelumShift.text = timeFormatInput(
@@ -631,6 +671,14 @@ class _PengajuanLemburViewState extends State<PengajuanLemburView> {
               context: context,
               initialTime: TimeOfDay(hour: 0, minute: 0),
               initialEntryMode: TimePickerEntryMode.input,
+              builder: (context, child) => MediaQuery(
+                data: MediaQuery.of(context).copyWith(
+                  // alwaysUse24HourFormat: true,
+                  viewInsets: EdgeInsets.zero,
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: child ?? const SizedBox.shrink(),
+              ),
             ).then((value) {
               if (value != null) {
                 controller.durasiLemburSesudahShift.text = timeFormatInput(
@@ -655,6 +703,14 @@ class _PengajuanLemburViewState extends State<PengajuanLemburView> {
               context: context,
               initialTime: TimeOfDay(hour: 0, minute: 0),
               initialEntryMode: TimePickerEntryMode.input,
+              builder: (context, child) => MediaQuery(
+                data: MediaQuery.of(context).copyWith(
+                  // alwaysUse24HourFormat: true,
+                  viewInsets: EdgeInsets.zero,
+                  textScaler: const TextScaler.linear(1.0),
+                ),
+                child: child ?? const SizedBox.shrink(),
+              ),
             ).then((value) {
               if (value != null) {
                 controller.durasiIstirahatSesudahShift.text = timeFormatInput(
@@ -695,7 +751,11 @@ class _PengajuanLemburViewState extends State<PengajuanLemburView> {
         // debugPrint('Response Body Attendance: ${jsonR}');
         if (jsonR['data'] == null) {
           if (Get.isDialogOpen!) Get.back();
-          DialogCustom().dialog(title: 'Gagal!', subtitle: jsonR['message'], onTap: () => Get.back());
+          DialogCustom().dialog(
+            title: 'Gagal!',
+            subtitle: jsonR['message'],
+            onTap: () => Get.back(),
+          );
           return;
         }
         selectedShift = Shift.fromMap(jsonR['data']);

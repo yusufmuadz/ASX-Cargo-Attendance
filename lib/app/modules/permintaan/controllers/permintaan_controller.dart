@@ -1154,7 +1154,7 @@ class PermintaanController extends GetxController {
             style: GoogleFonts.urbanist(color: Colors.white),
           ),
         );
-        debugPrint(await response.stream.bytesToString());
+        // debugPrint(await response.stream.bytesToString());
       } else {
         debugPrint(response.reasonPhrase);
         Get.rawSnackbar(
@@ -1384,7 +1384,7 @@ class PermintaanController extends GetxController {
             style: GoogleFonts.urbanist(color: Colors.white),
           ),
         );
-        debugPrint(await response.stream.bytesToString());
+        print(await response.stream.bytesToString());
       } else {
         debugPrint(response.reasonPhrase);
         Get.rawSnackbar(

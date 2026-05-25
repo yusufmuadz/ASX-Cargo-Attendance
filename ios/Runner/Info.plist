@@ -54,6 +54,15 @@
 	<string>Aplikasi membutuhkan izin untuk menyimpan foto ke galeri.</string>
 
 	<key>NSCameraUsageDescription</key>
-	<string>Aplikasi membutuhkan akses kamera untuk mengambil foto.</string>
+	<string>Camera access is required to verify your identity and protect account security.</string>
+
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Aplikasi membutuhkan akses lokasi untuk absensi.</string>
+
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Aplikasi membutuhkan akses lokasi untuk absensi.</string>
+
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Aplikasi membutuhkan akses lokasi untuk absensi.</string>
 </dict>
 </plist>
